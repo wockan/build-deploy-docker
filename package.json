@@ -4,7 +4,7 @@
   "description": "simple http for test",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test-mocha & npm run test-xunit",
+    "test": "npm run test-mocha ; npm run test-xunit",
     "test-mocha": "node_modules/.bin/_mocha  -t 100 -R mocha-multi --reporter-options tap=./_results/ci-unitTest.testresults.tap",
     "test-xunit":  "cat ./_results/ci-unitTest.testresults.tap | node_modules/.bin/tap-xunit > ./_results/ci-unitTest.testresults.xml",
     "start": "node index.js"
