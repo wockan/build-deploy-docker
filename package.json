@@ -1,0 +1,22 @@
+{
+  "name": "build-deploy-docker",
+  "version": "1.0.0",
+  "description": "simple http for test",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test-mocha & npm run test-xunit",
+    "test-mocha": "node_modules/.bin/_mocha  -t 100 -R mocha-multi --reporter-options tap=./_results/ci-unitTest.testresults.tap",
+    "test-xunit":  "cat ./_results/ci-unitTest.testresults.tap | node_modules/.bin/tap-xunit > ./_results/ci-unitTest.testresults.xml",
+    "start": "node index.js"
+  },
+  "author": "tcne",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "mocha-multi": "^0.9.1",
+    "tap-xunit": "^1.7.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}
